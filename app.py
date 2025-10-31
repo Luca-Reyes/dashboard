@@ -94,7 +94,7 @@ st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("📋 Diccionario de variables")
 
-diccionario_files = buscar_archivos("Miproyecto1", "Diccionario de variables.xlsx")
+diccionario_files = buscar_archivos("Miproyecto1", "Diccionario de varibales.xlsx")
 
 if diccionario_files:
     try:
@@ -102,9 +102,9 @@ if diccionario_files:
         st.write(f"📘 Archivo cargado: `{os.path.basename(diccionario_files[0])}`")
         st.dataframe(df_dicc, use_container_width=True)
     except Exception as e:
-        st.error(f"❌ Error al cargar Diccionario de variables: {e}")
+        st.error(f"❌ Error al cargar Diccionario de varibales: {e}")
 else:
-    st.info("ℹ️ No se encontró el archivo `Diccionario de variables.xlsx`.")
+    st.info("ℹ️ No se encontró el archivo `Diccionario de varibales.xlsx`.")
 
 st.markdown("</div>", unsafe_allow_html=True)
 
