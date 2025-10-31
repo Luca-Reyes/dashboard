@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Dashboard Miproyecto1", layout="wide")
+st.set_page_config(page_title="Dashboard miproyecto1", layout="wide")
 st.title("📊 Dashboard: Factores de Empleabilidad")
 st.markdown("Proyecto: **Miproyecto1**")
 
