@@ -1,0 +1,29 @@
+2025-10-30 21:11:51,304 - INFO - --- Iniciando Proceso de Limpieza, Normalización y FILTRADO ---
+2025-10-30 21:11:51,949 - INFO - Archivo 'ENCUESTA_DE_PERCEPCIÓN_EN_EL_USO__DE_LA_INTELIGENCIA_ARTIFICIAL_Y_LA_EMPLEABILIDAD_-_all_versions_-_labels_-_2025-10-30-15-38-54.xlsx' cargado exitosamente.
+2025-10-30 21:11:51,950 - INFO - Total de registros leídos: 455
+2025-10-30 21:11:51,962 - INFO - Se eliminaron 0 registros duplicados.
+2025-10-30 21:11:51,962 - INFO - Iniciando limpieza de la columna '¿En qué universidad estudias actualmente?'...
+2025-10-30 21:11:51,968 - INFO - Valores nulos/vacíos antes: 0
+2025-10-30 21:11:51,969 - INFO - Valores nulos/vacíos después (estandarizados): 0
+2025-10-30 21:11:51,969 - INFO - Total de registros antes del filtrado (después de duplicados): 455
+2025-10-30 21:11:52,001 - INFO - Se han filtrado los datos. Se conservan 156 registros de 'ESPOCH'.
+2025-10-30 21:11:52,002 - INFO - Se descartaron 299 registros (de otras universidades o nulos).
+2025-10-30 21:11:52,002 - INFO - --- Reporte de Cambios (Muestreo de filas CONSERVADAS) ---
+2025-10-30 21:11:52,004 - INFO - Total de registros conservados de 'ESPOCH': 156
+2025-10-30 21:11:52,005 - INFO - Total de registros que necesitaron normalización (ej. 'Esc. Sup.' -> 'ESPOCH'): 101
+2025-10-30 21:11:52,005 - INFO - Ejemplos de normalización (Antes -> Después):
+2025-10-30 21:11:52,035 - INFO -          ¿En qué universidad estudias actualmente? columna_limpia_espoch
+2025-10-30 21:11:52,035 - INFO -   140                                       Espoch                ESPOCH
+2025-10-30 21:11:52,035 - INFO -   141   Escuela Superior Politécnica de Chimborazo                ESPOCH
+2025-10-30 21:11:52,035 - INFO -   150   Escuela superior politécnica de chimborazo                ESPOCH
+2025-10-30 21:11:52,035 - INFO -   163   ESCUELA SUPERIOR POLITÉCNICA DE CHIMBORAZO                ESPOCH
+2025-10-30 21:11:52,035 - INFO -   174   Escuela superior politécnica de Chimborazo                ESPOCH
+2025-10-30 21:11:52,035 - INFO -   178   Escuela Superior politécnica de Chimborazo                ESPOCH
+2025-10-30 21:11:52,035 - INFO -   193   ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO                ESPOCH
+2025-10-30 21:11:52,036 - INFO -   250   Escuela Superior Politecnica de Chimborazo                ESPOCH
+2025-10-30 21:11:52,036 - INFO -   253  Escuela Superior Politécnica  de Chimborazo                ESPOCH
+2025-10-30 21:11:52,036 - INFO -   276                                       espoch                ESPOCH
+2025-10-30 21:11:52,328 - INFO - Archivo Excel (SOLO ESPOCH) guardado en: 'encuesta_limpia_ESPOCH.xlsx'
+2025-10-30 21:11:52,329 - INFO - Archivo CSV (SOLO ESPOCH) guardado en: 'encuesta_limpia_ESPOCH.csv'
+2025-10-30 21:11:52,329 - INFO - Reporte de limpieza guardado en: 'reporte_limpieza_ESPOCH.log'
+2025-10-30 21:11:52,329 - INFO - --- Proceso de Limpieza y Filtrado Finalizado ---
