@@ -163,8 +163,8 @@ if diccionario_files:
 else:
     st.info("ℹ️ No se encontró el archivo `Diccionario de varibales.xlsx`.")
 
-
 # --- SECCIÓN 3: GRÁFICOS PNG ---
+st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("📈 Gráficos generados")
 
 png_files = buscar_archivos("Miproyecto1", "*.png")
@@ -174,7 +174,6 @@ if png_files:
     for i, img_path in enumerate(png_files):
         col = cols[i % 2]
         with col:
-            st.markdown()
             st.markdown(f"<div class='graph-card'>", unsafe_allow_html=True)
             try:
                 st.image(img_path, caption=os.path.basename(img_path), use_column_width=True)
@@ -183,6 +182,8 @@ if png_files:
             st.markdown("</div>", unsafe_allow_html=True)
 else:
     st.info("ℹ️ No se encontraron archivos de imagen (.png).")
+
+st.markdown("</div>", unsafe_allow_html=True)
 
 
 # --- SECCIÓN 4: DESCARGAR ARCHIVOS ---
