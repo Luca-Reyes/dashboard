@@ -164,7 +164,6 @@ else:
     st.info("ℹ️ No se encontró el archivo `Diccionario de varibales.xlsx`.")
 
 # --- SECCIÓN 3: GRÁFICOS PNG ---
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("📈 Gráficos generados")
 
 png_files = buscar_archivos("Miproyecto1", "*.png")
@@ -183,7 +182,6 @@ if png_files:
 else:
     st.info("ℹ️ No se encontraron archivos de imagen (.png).")
 
-st.markdown("</div>", unsafe_allow_html=True)
 
 
 # --- SECCIÓN 4: DESCARGAR ARCHIVOS ---
