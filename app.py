@@ -122,7 +122,6 @@ def buscar_archivos(carpeta, patron):
     return sorted(glob.glob(os.path.join(carpeta, patron)))
 
 # --- SECCIÓN 1: DATOS COMPLETOS DE LA ENCUESTA ---
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("🔍 Datos completos de la encuesta")
 
 csv_files = buscar_archivos("Miproyecto1", "*.csv")
@@ -148,8 +147,6 @@ elif xlsx_files:
 else:
     st.warning("⚠️ No se encontró ningún archivo de datos (.csv o .xlsx).")
 
-st.markdown("</div>", unsafe_allow_html=True)
-
 # --- SECCIÓN 2: DICCIONARIO DE VARIABLES ---
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("📋 Diccionario de variables")
@@ -167,7 +164,6 @@ if diccionario_files:
 else:
     st.info("ℹ️ No se encontró el archivo `Diccionario de varibales.xlsx`.")
 
-st.markdown("</div>", unsafe_allow_html=True)
 
 # --- SECCIÓN 3: GRÁFICOS PNG ---
 st.markdown("<div class='section'>", unsafe_allow_html=True)
@@ -189,7 +185,6 @@ if png_files:
 else:
     st.info("ℹ️ No se encontraron archivos de imagen (.png).")
 
-st.markdown("</div>", unsafe_allow_html=True)
 
 # --- SECCIÓN 4: DESCARGAR ARCHIVOS ---
 st.markdown("<div class='section'>", unsafe_allow_html=True)
@@ -216,7 +211,6 @@ with st.expander("📂 Archivos disponibles"):
     else:
         st.info("No hay archivos para descargar.")
 
-st.markdown("</div>", unsafe_allow_html=True)
 
 # --- PIE DE PÁGINA ---
 st.markdown("---")
