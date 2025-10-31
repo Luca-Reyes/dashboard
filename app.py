@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Dashboard miproyecto1", layout="wide")
+st.set_page_config(page_title="Dashboard Miproyecto1", layout="wide")
 st.title("📊 Dashboard: Factores de Empleabilidad")
 st.markdown("Proyecto: **Miproyecto1**")
 
-# Cargar y mostrar datos
+# Cargar datos
 try:
-    df = pd.read_csv("miproyecto1/encuesta_limpia_ESPOCH.csv")
+    df = pd.read_csv("Miproyecto1/encuesta_limpia_ESPOCH.csv")
     st.subheader("🔍 Datos de la encuesta (primeras 10 filas)")
     st.dataframe(df.head(10))
 except Exception as e:
@@ -20,15 +20,15 @@ col1, col2 = st.columns(2)
 
 with col1:
     try:
-        st.image("miproyecto1/grafico_factores_empleabilidad.png", caption="Ranking de Factores de Empleabilidad", use_column_width=True)
-    except:
-        st.warning("No se encontró: grafico_factores_empleabilidad.png")
+        st.image("Miproyecto1/grafico_factores_empleabilidad.png", caption="Ranking de Factores de Empleabilidad", use_column_width=True)
+    except Exception as e:
+        st.warning(f"⚠️ No se encontró el gráfico: grafico_factores_empleabilidad.png\n{e}")
 
 with col2:
     try:
-        st.image("miproyecto1/grafico_distribucion_indicadores.png", caption="Distribución de Indicadores", use_column_width=True)
-    except:
-        st.warning("No se encontró: grafico_distribucion_indicadores.png")
+        st.image("Miproyecto1/grafico_distribucion_indicadores.png", caption="Distribución de Indicadores", use_column_width=True)
+    except Exception as e:
+        st.warning(f"⚠️ No se encontró el gráfico: grafico_distribucion_indicadores.png\n{e}")
 
 st.markdown("---")
 st.caption("Dashboard generado con Streamlit • Datos actualizados desde CSV")
