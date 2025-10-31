@@ -148,7 +148,6 @@ else:
     st.warning("⚠️ No se encontró ningún archivo de datos (.csv o .xlsx).")
 
 # --- SECCIÓN 2: DICCIONARIO DE VARIABLES ---
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("📋 Diccionario de variables")
 
 # Nota: el nombre del archivo tiene un typo: "varibales" → lo dejamos así para que funcione
@@ -166,7 +165,6 @@ else:
 
 
 # --- SECCIÓN 3: GRÁFICOS PNG ---
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("📈 Gráficos generados")
 
 png_files = buscar_archivos("Miproyecto1", "*.png")
@@ -187,7 +185,6 @@ else:
 
 
 # --- SECCIÓN 4: DESCARGAR ARCHIVOS ---
-st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("⬇️ Descargar archivos")
 
 with st.expander("📂 Archivos disponibles"):
