@@ -179,7 +179,7 @@ if png_files:
                 st.image(img_path, caption=os.path.basename(img_path), use_column_width=True)
             except Exception as e:
                 st.warning(f"⚠️ Error mostrando {os.path.basename(img_path)}: {e}")
-            st.markdown("</div>", unsafe_allow_html=True)
+            
 else:
     st.info("ℹ️ No se encontraron archivos de imagen (.png).")
 
