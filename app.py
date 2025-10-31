@@ -143,15 +143,16 @@ with st.expander("📂 Archivos disponibles"):
     all_files.extend(png_files)
 
     if all_files:
-        for file_path in all_files:
-            with open(file_path, "rb") as f:
-                st.download_button(
-                    label=f"📥 Descargar {os.path.basename(file_path)}",
-                    data=f,
-                    file_name=os.path.basename(file_path),
-                    mime="application/octet-stream",
-                    help=f"Haz clic para descargar {os.path.basename(file_path)}"
-                )
+      for i, file_path in enumerate(all_files):
+    with open(file_path, "rb") as f:
+        st.download_button(
+            label=f"📥 Descargar {os.path.basename(file_path)}",
+            data=f,
+            file_name=os.path.basename(file_path),
+            mime="application/octet-stream",
+            help=f"Haz clic para descargar {os.path.basename(file_path)}",
+            key=f"download_{i}"  # 👈 Clave única para cada botón
+        )
     else:
         st.info("No hay archivos para descargar.")
 
