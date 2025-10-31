@@ -94,7 +94,7 @@ st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.subheader("📋 Diccionario de variables")
 
-diccionario_files = buscar_archivos("Miproyecto1", "Diccionario de varibales.xlsx")
+diccionario_files = buscar_archivos("Miproyecto1", "Diccionario de variables.xlsx")
 
 if diccionario_files:
     try:
@@ -104,7 +104,7 @@ if diccionario_files:
     except Exception as e:
         st.error(f"❌ Error al cargar Diccionario de variables: {e}")
 else:
-    st.info("ℹ️ No se encontró el archivo `Diccionario de varibales.xlsx`.")
+    st.info("ℹ️ No se encontró el archivo `Diccionario de variables.xlsx`.")
 
 st.markdown("</div>", unsafe_allow_html=True)
 
@@ -143,16 +143,16 @@ with st.expander("📂 Archivos disponibles"):
     all_files.extend(png_files)
 
     if all_files:
-      for i, file_path in enumerate(all_files):
-    with open(file_path, "rb") as f:
-        st.download_button(
-            label=f"📥 Descargar {os.path.basename(file_path)}",
-            data=f,
-            file_name=os.path.basename(file_path),
-            mime="application/octet-stream",
-            help=f"Haz clic para descargar {os.path.basename(file_path)}",
-            key=f"download_{i}"  # 👈 Clave única para cada botón
-        )
+        for i, file_path in enumerate(all_files):
+            with open(file_path, "rb") as f:
+                st.download_button(
+                    label=f"📥 Descargar {os.path.basename(file_path)}",
+                    data=f,
+                    file_name=os.path.basename(file_path),
+                    mime="application/octet-stream",
+                    help=f"Haz clic para descargar {os.path.basename(file_path)}",
+                    key=f"download_{i}"  # 👈 CLAVE ÚNICA PARA EVITAR ERROR
+                )
     else:
         st.info("No hay archivos para descargar.")
 
