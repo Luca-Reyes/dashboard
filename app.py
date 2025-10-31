@@ -174,7 +174,7 @@ if png_files:
     for i, img_path in enumerate(png_files):
         col = cols[i % 2]
         with col:
-            st.markdown(f"<div class='graph-card'>", unsafe_allow_html=True)
+            st.markdown()
             try:
                 st.image(img_path, caption=os.path.basename(img_path), use_column_width=True)
             except Exception as e:
